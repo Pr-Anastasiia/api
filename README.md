@@ -5,6 +5,7 @@
                  4) змістити подію по часу
                  5) видалити подію
                  6) отримати список подій на певний проміжок часу
+
 Наразі Swagger UI стабільно викидає помилку:
 System.InvalidOperationException: Endpoint api.Controllers.AuthController.GoogleLogin (api) contains CORS metadata, but a middleware was not found that supports CORS.
 Configure your application startup by adding app.UseCors() in the application startup code. If there are calls to app.UseRouting() and app.UseEndpoints(...), the call to app.UseCors() must go between them.
@@ -15,4 +16,5 @@ Configure your application startup by adding app.UseCors() in the application st
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
 !! Доки увесь функціонал не є client friendly, бажано змінити поля calendarId та eventId на більш зручніші для користувача. Певні контролери ще знаходяться на стадії розробки, до прикладу контролер створення події не вимагає ім'я для неї (що не має відповідати дійсності), оскільки в першу чергу я сконцетрувалась на успішній реалізації авторизації користувачів через Google.
